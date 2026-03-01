@@ -18,12 +18,18 @@
   system.stateVersion = "25.11"; # Did you read the comment?
 
 
-
   nix.gc.automatic = true;
   nix.gc.dates = "daily"; 
   nix.gc.options = "--delete-older-than 3d";
 
   nix.optimise.automatic = true;
   nix.optimise.dates = [ "dayly" ];
+
+
+
+  networking.networkmanager.enable = true;
+
+  services.resolved.enable = true;
+
 
 }
