@@ -13,6 +13,7 @@
     nixosConfigurations.nix-sway = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
+        ./hardware-configuration.nix # <-- Добавили сюда
         ./configuration.nix
         ./user.nix
         ./packages.nix
